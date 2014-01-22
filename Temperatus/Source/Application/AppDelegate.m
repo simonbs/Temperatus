@@ -11,6 +11,8 @@
 #import "BSAudioDeviceManager.h"
 #import "StatusItemView.h"
 
+static void *KVOStatusItemContext = &KVOStatusItemContext;
+
 #define TMPUSCelciusToKelvin(x) x + 273.15f
 #define TMPUSCelciusToFahrenheit(x) (x * 1.80f) + 32.0f
 #define TMPUSTwitterUsername @"simonbs"
@@ -48,6 +50,11 @@
 
 - (void)dealloc
 {
+    @try {
+        [self.statusItem removeObserver:self forKeyPath:@"isHighlighted" context:KVOStatusItemContext];
+    }
+    @catch (NSException *__unused e) { }
+    
     self.audioDeviceManager = nil;
     self.statusItem = nil;
     self.statusItemView = nil;
@@ -159,7 +166,15 @@
     
     self.statusItemView.statusItem = self.statusItem;
     
-    [self.statusItem addObserver:self forKeyPath:@"isHighlighted" options:0 context:NULL];
+    if (self.statusItem)
+    {
+        @try {
+            [self.statusItem removeObserver:self forKeyPath:@"isHighlighted" context:KVOStatusItemContext];
+        }
+        @catch (NSException *__unused e) { }
+    }
+    
+    [self.statusItem addObserver:self forKeyPath:@"isHighlighted" options:0 context:KVOStatusItemContext];
     
     [self.statusItemView showIcon];
 }

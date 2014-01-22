@@ -86,6 +86,11 @@ static void *KVOSelfContext = &KVOSelfContext;
 
 - (void)dealloc
 {
+    @try {
+        [self removeObserver:self forKeyPath:@"highlighted" context:KVOSelfContext];
+    }
+    @catch (NSException *__unused e) { }
+    
     self.delegate = nil;
     self.statusItem = nil;
     self.target = nil;
