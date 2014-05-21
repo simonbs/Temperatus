@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3F4B66DD17E94594B081C7A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B12B5234444A8FA5124658 /* libPods.a */; };
+		721CAF1D192D186D00B5B4E4 /* ThermodoSDKMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721CAF1C192D186D00B5B4E4 /* ThermodoSDKMac.framework */; };
+		721CAF1E192D18CC00B5B4E4 /* ThermodoSDKMac.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 721CAF1C192D186D00B5B4E4 /* ThermodoSDKMac.framework */; };
 		729FEE0F18903D110041E1A1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729FEE0E18903D110041E1A1 /* Cocoa.framework */; };
 		729FEE1918903D110041E1A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 729FEE1718903D110041E1A1 /* InfoPlist.strings */; };
 		729FEE1B18903D110041E1A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 729FEE1A18903D110041E1A1 /* main.m */; };
@@ -22,8 +24,6 @@
 		729FEE5118903D4E0041E1A1 /* GVUserDefaults+Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 729FEE4918903D4E0041E1A1 /* GVUserDefaults+Settings.m */; };
 		729FEE5218903D4E0041E1A1 /* BSAudioDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 729FEE4C18903D4E0041E1A1 /* BSAudioDeviceManager.m */; };
 		729FEE5318903D4E0041E1A1 /* StatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 729FEE4F18903D4E0041E1A1 /* StatusItemView.m */; };
-		729FEE5518903D910041E1A1 /* ThermodoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729FEE5418903D910041E1A1 /* ThermodoSDK.framework */; };
-		729FEE5718903DC30041E1A1 /* ThermodoSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 729FEE5418903D910041E1A1 /* ThermodoSDK.framework */; };
 		729FEE5918903DFD0041E1A1 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729FEE5818903DFD0041E1A1 /* CoreAudio.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				729FEE5718903DC30041E1A1 /* ThermodoSDK.framework in CopyFiles */,
+				721CAF1E192D18CC00B5B4E4 /* ThermodoSDKMac.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +53,7 @@
 /* Begin PBXFileReference section */
 		16B12B5234444A8FA5124658 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8CE07BFA6D4861A1D1E57A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		721CAF1C192D186D00B5B4E4 /* ThermodoSDKMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ThermodoSDKMac.framework; sourceTree = "<group>"; };
 		729FEE0B18903D110041E1A1 /* Temperatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temperatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		729FEE0E18903D110041E1A1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		729FEE1118903D110041E1A1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -78,7 +79,6 @@
 		729FEE4C18903D4E0041E1A1 /* BSAudioDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAudioDeviceManager.m; sourceTree = "<group>"; };
 		729FEE4E18903D4E0041E1A1 /* StatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemView.h; sourceTree = "<group>"; };
 		729FEE4F18903D4E0041E1A1 /* StatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemView.m; sourceTree = "<group>"; };
-		729FEE5418903D910041E1A1 /* ThermodoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ThermodoSDK.framework; sourceTree = "<group>"; };
 		729FEE5818903DFD0041E1A1 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -88,8 +88,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				729FEE5918903DFD0041E1A1 /* CoreAudio.framework in Frameworks */,
+				721CAF1D192D186D00B5B4E4 /* ThermodoSDKMac.framework in Frameworks */,
 				729FEE0F18903D110041E1A1 /* Cocoa.framework in Frameworks */,
-				729FEE5518903D910041E1A1 /* ThermodoSDK.framework in Frameworks */,
 				3F4B66DD17E94594B081C7A0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,8 +129,8 @@
 		729FEE0D18903D110041E1A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				721CAF1C192D186D00B5B4E4 /* ThermodoSDKMac.framework */,
 				729FEE5818903DFD0041E1A1 /* CoreAudio.framework */,
-				729FEE5418903D910041E1A1 /* ThermodoSDK.framework */,
 				729FEE0E18903D110041E1A1 /* Cocoa.framework */,
 				729FEE2D18903D120041E1A1 /* XCTest.framework */,
 				729FEE1018903D110041E1A1 /* Other Frameworks */,
@@ -519,6 +519,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Temperatus/Temperatus-Prefix.pch";
@@ -539,6 +540,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Temperatus/Temperatus-Prefix.pch";

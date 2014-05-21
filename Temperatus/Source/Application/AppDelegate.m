@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <ThermodoSDK/THMThermodo.h>
+#import <ThermodoSDKMac/THMThermodo.h>
 #import "BSAudioDeviceManager.h"
 #import "StatusItemView.h"
 
@@ -248,7 +248,7 @@ static void *KVOStatusItemContext = &KVOStatusItemContext;
 #pragma mark -
 #pragma mark Thermodo Delegate
 
-- (void)thermodo:(THMThermodo *)thermodo didGetTemperature:(CGFloat)temperature
+- (void)thermodo:(THMThermodo *)thermodo didGetTemperature:(float)temperature
 {
     self.hasTemperature = YES;
     self.currentTemperature = temperature;
